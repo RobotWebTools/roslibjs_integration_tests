@@ -21,20 +21,20 @@ describe('ROS.pubsub', function() {
 
       var hi = new ROSLIB.Message( {data: 'hi!'} );
 
-      var chatter_listener = new ROSLIB.Topic({
+      var chatterListener = new ROSLIB.Topic({
         ros : ros,
         name : '/chatter',
         messageType : 'std_msgs/String'
       });
 
       // Then we add a callback to be called every time a message is published on this topic.
-      chatter_listener.subscribe(function(message) {
-        console.log('Received message on ' + chatter_listener.name + ': ' + message.data);
+      chatterListener.subscribe(function(message) {
+        console.log('Received message on ' + chatterListener.name + ': ' + message.data);
 
         gotMessage = message.data;
 
         // If desired, we can unsubscribe from the topic as well.
-        chatter_listener.unsubscribe();
+        chatterListener.unsubscribe();
 
         expect(gotMessage).to.equal('hi!');
 
