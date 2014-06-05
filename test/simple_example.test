@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+    <node name="greeter" pkg="rostopic" type="rostopic" args="pub /listener std_msgs/String 'Hello, World'"/>
+    <node name="adder"   pkg="rospy_tutorials" type="add_two_ints_server" />
+
+    <test test-name="test_subscribe" pkg="roslibjs_integration_tests" type="js_runner" args="simple_example.test.js" time-limit="10000.0"/>
+</launch>
