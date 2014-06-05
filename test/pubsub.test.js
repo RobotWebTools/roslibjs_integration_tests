@@ -19,7 +19,7 @@ describe('ROS.pubsub', function() {
           messageType : 'std_msgs/String'
         });
 
-      var hi = new ROSLIB.Message( {data: "hi!"} )
+      var hi = new ROSLIB.Message( {data: 'hi!'} );
 
       var chatter_listener = new ROSLIB.Topic({
         ros : ros,

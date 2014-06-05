@@ -13,6 +13,7 @@ module.exports = function(grunt) {
       },
       files: [
         'Gruntfile.js',
+        'test/*.test.js'
       ]
     },
     karma: {

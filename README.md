@@ -1,17 +1,18 @@
 Integration tests for roslibjs
 ========
 
-# Loacal development
+# Local development
 
-`roslibjs_integration_tests` depends on roslibjs. For now, they mush
+`roslibjs_integration_tests` depends on roslibjs. For now, they must
 share the same parent folder. The tests will just use non-minified
 build of roslibjs (see Gruntfile).
 
 # Running tests
 
-Integration testing launches the ros master, rosbridge and a browser
-to test end-to-end communication. Tested under ubuntu only with
-chrome. It doesn't work with phantomjs, beacuse it's currently
+Integration testing launches the ROS master, rosbridge and a browser
+to test end-to-end communication.
+
+Tested under ubuntu only with chrome. It *doesn't work with phantomjs*, beacuse it's currently
 incompatible with the latest websockets standard that rosbridge uses
 (https://github.com/ariya/phantomjs/issues/11018).
 
