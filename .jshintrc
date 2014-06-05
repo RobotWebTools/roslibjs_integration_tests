@@ -1,7 +1,11 @@
 {
   "globals": {
     "module": true,
-    "EventEmitter2" : true
+    "EventEmitter2" : true,
+    "ROSLIB": true,
+    "chai": true,
+    "describe": true,
+    "it": true
   },
   "curly": true,
   "eqeqeq": true,
@@ -22,4 +26,3 @@
   "proto": true,
   "laxbreak": true
 }
-
