@@ -11,7 +11,9 @@ WD=$(rospack find roslibjs_integration_tests)
 cd $WD
 
 if [ -f ${TEST_DIR}/${JS_TEST_NAME} ] ; then
-    grunt karma:integration --jsFiles=${TEST_DIR}/${JS_TEST_NAME} 2>&1 >/tmp/integration_test_log
+    export JS_TEST_FILE=${TEST_DIR}/${JS_TEST_NAME}
+    karma start ${TEST_DIR}/karma.conf.js 2>&1 >/tmp/integration_test_log
+
     NE=$?
 else
     NE=1
