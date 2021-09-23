@@ -1,4 +1,4 @@
-Integration tests for roslibjs
+DEPRECATED: Integration tests for roslibjs
 ========
 
 # Local development
